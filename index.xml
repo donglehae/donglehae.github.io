@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>동그리동해의 다락방</title>
+    <title>CodeClimber</title>
     <link>https://donglehae.github.io/</link>
-    <description>Recent content on 동그리동해의 다락방</description>
+    <description>Recent content on CodeClimber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="https://donglehae.github.io/index.xml" rel="self" type="application/rss+xml" />
