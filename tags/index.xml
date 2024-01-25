@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 23 Jan 2024 22:37:09 +0900</lastBuildDate>
     <atom:link href="https://donglehae.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GitHub Pages</title>
-      <link>https://donglehae.github.io/tags/github-pages/</link>
+      <title>Chocolatey</title>
+      <link>https://donglehae.github.io/tags/chocolatey/</link>
       <pubDate>Tue, 23 Jan 2024 22:37:09 +0900</pubDate>
-      <guid>https://donglehae.github.io/tags/github-pages/</guid>
+      <guid>https://donglehae.github.io/tags/chocolatey/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +20,13 @@
       <link>https://donglehae.github.io/tags/hugo/</link>
       <pubDate>Tue, 23 Jan 2024 22:37:09 +0900</pubDate>
       <guid>https://donglehae.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PaperMod</title>
+      <link>https://donglehae.github.io/tags/papermod/</link>
+      <pubDate>Tue, 23 Jan 2024 22:37:09 +0900</pubDate>
+      <guid>https://donglehae.github.io/tags/papermod/</guid>
       <description></description>
     </item>
   </channel>
