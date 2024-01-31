@@ -98,8 +98,8 @@
   "keywords": [
     "Hugo", "Chocolatey", "PaperMod"
   ],
-  "articleBody": "Hugo 소개 Hugo는 Go로 작성된 정적 사이트 생성기(Static Site Generator)로 웹사이트를 빠르고 효율적으로 구축할 수 있게 해주는 도구입니다.\nHugo 특징 고성능: Hugo는 Go 언어로 작성되어 있어 매우 빠른 성능을 자랑합니다. 큰 사이트도 몇 초 내에 생성할 수 있습니다. 간편한 설치: 별도의 의존성이나 데이터베이스 없이 단일 실행 파일로 설치되며, 이는 사용과 배포를 매우 간단하게 만듭니다. 유연성과 확장성: Hugo는 다양한 테마와 템플릿을 지원하며, 마크다운(Markdown)을 사용하여 콘텐츠를 작성할 수 있습니다. 실시간 리로딩: 로컬 개발 서버에서 작업 시, 파일 변경을 자동으로 감지하여 실시간으로 웹사이트를 업데이트합니다. 정적 사이트의 장점: 보안, 속도, 이동성, 버전 관리의 이점을 제공합니다. Git 통합: Hugo는 Git과 잘 통합되어 컨텐츠 관리 및 배포가 용이합니다. 많은 사용자들이 GitHub Pages와 같은 서비스와 함께 Hugo를 사용하여 무료로 웹사이트를 호스팅합니다. Hugo 설치 Chocolatey 설치: 윈도우에서 Chocolatey를 설치하지 않았다면, PowerShell을 관리자 권한으로 열고 다음 명령어를 실행하세요. Chocolatey는 Windows 운영 체제를 위한 패키지 관리자입니다. Windows 환경에서 소프트웨어 설치, 업데이트 및 관리를 자동화하고 간소화하는 데 사용됩니다.\n1 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')) Hugo 설치: Chocolatey가 설치되면, 다음 명령어를 통해 Hugo를 설치하세요. 1 choco install hugo -confirm Hugo 웹사이트 구축 사이트 생성: 원하는 디렉토리에서 다음 명령어를 실행하여 Hugo 사이트를 생성하세요.\n1 2 hugo new site blog -f \"yaml\" # hugo new site [사이트 이름] [옵션] Hugo 테마 선택: 마음에 드는 테마를 선택하세요. GitHub Pages + Hugo Tutorial에서는 PaperMod 테마를 기준으로 작성하겠습니다.\nPaperMod 테마 적용: 선택한 테마의 GitHub 레포지토리 링크를 복사한 후, 다음 명령어로 테마를 사이트에 추가하세요.\n1 2 3 4 5 6 cd blog # cd [사이트 이름] git init git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod # git submodule add [테마의 GitHub URL] themes/[테마 이름] ``` {linenos=true} 설정 파일 수정: blog 폴더 내의 hugo.yaml 파일을 열고, 사용할 테마를 작성하세요.\n1 2 3 4 5 baseURL: https://example.org/ languageCode: en-us title: My New Hugo Site theme: hugo-PaperMod # theme: [테마 이름] 서버 실행 및 미리보기: 다음 명령어로 로컬 서버를 실행하고 웹 브라우저에서 http://localhost:1313 주소로 이동하여 사이트를 확인하세요.\n1 hugo server 마무리 이번 튜토리얼에서는 Windows 환경에서 Hugo를 설치하고, 첫 웹사이트를 생성하는 방법을 배웠습니다. Chocolatey를 이용해 Hugo를 쉽게 설치하고, Hugo의 강력한 기능과 빠른 성능을 활용하여 기본적인 웹사이트를 구축하는 과정을 거쳤습니다.\n이제 여러분은 Hugo의 기본적인 설치 및 사이트 생성 과정에 익숙해졌을 것입니다. 다음으로, 이렇게 생성한 사이트를 실제로 웹상에 배포하는 방법을 배울 것입니다.\n다음 튜토리얼에서는 GitHub Pages를 사용하여 Hugo 사이트를 호스팅하는 방법을 다룰 예정입니다. GitHub Pages를 통해 여러분의 Hugo 사이트를 인터넷에 무료로 공개하고, 전 세계 사람들과 공유할 수 있게 됩니다.\nGitHub Pages는 사용이 간편하고, GitHub 저장소와 직접 연동되어 효율적인 웹사이트 관리 및 배포가 가능합니다. 다음 튜토리얼에서는 이러한 과정을 자세히 설명하고, 여러분이 쉽게 따라할 수 있도록 안내할 것입니다.\n그러니 기대하시고, 다음 튜토리얼에서 만나요!\n",
-  "wordCount" : "423",
+  "articleBody": "Hugo 소개 Hugo는 강력하고 빠른 정적 사이트 생성기로, 간단한 블로그에서부터 복잡한 웹사이트까지 다양한 용도로 사용될 수 있는 오픈 소스 소프트웨어입니다.\nHugo 특징 빠른 빌드 속도: Hugo는 정적 사이트를 생성하는 데 몇 초 밖에 걸리지 않습니다. 이는 대규모 사이트에서도 뛰어난 성능을 발휘합니다. 간편한 설치 및 사용: 별도의 의존성 없이 단일 실행 파일로 제공되므로 설치가 매우 간단합니다. 또한, 사용법이 직관적이어서 학습 곡선이 낮습니다. 유연한 콘텐츠 관리: 마크다운(Markdown)을 사용하여 콘텐츠를 작성하고, 다양한 메타데이터 포맷을 지원하여 콘텐츠를 효율적으로 관리할 수 있습니다. 테마 시스템: 다양한 테마를 지원하여 사이트의 디자인과 레이아웃을 쉽게 변경할 수 있으며, 커스터마이징도 용이합니다. 강력한 확장성: 사용자 정의 템플릿, 단축코드, 플러그인 등을 통해 사이트의 기능을 확장할 수 있습니다. SEO 최적화: 정적 파일 생성으로 빠른 로딩 속도와 함께, SEO(검색 엔진 최적화)에 유리한 구조를 가지고 있습니다. Git 통합: 소스 코드 관리 시스템과의 통합을 통해, 콘텐츠 변경 사항을 쉽게 추적하고 관리할 수 있습니다. Hugo 설치 Chocolatey 설치: 윈도우에서 Chocolatey를 설치하지 않았다면, PowerShell을 관리자 권한으로 열고 다음 명령어를 실행하세요. Chocolatey는 Windows 운영 체제를 위한 패키지 관리자입니다. Windows 환경에서 소프트웨어 설치, 업데이트 및 관리를 자동화하고 간소화하는 데 사용됩니다.\n1 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')) Hugo 설치: Chocolatey가 설치되면, 다음 명령어를 통해 Hugo를 설치하세요. 1 choco install hugo -confirm Hugo 웹사이트 구축 사이트 생성: 원하는 디렉토리에서 다음 명령어를 실행하여 Hugo 사이트를 생성하세요.\n1 2 hugo new site blog -f \"yaml\" # hugo new site \u003c사이트 이름\u003e \u003c옵션\u003e Hugo 테마 선택: 마음에 드는 테마를 선택하세요.\nGitHub Pages + Hugo Tutorial에서는 PaperMod 테마를 기준으로 설명하겠습니다.\nPaperMod 테마 등록: 선택한 테마의 GitHub 레포지토리 링크를 복사한 후, 다음 명령어로 테마를 사이트에 추가하세요.\n1 2 3 4 5 cd blog # cd \u003c사이트 이름\u003e git init git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod # git submodule add \u003c테마의 GitHub URL\u003e themes/\u003c테마 이름\u003e PaperMod 테마 적용: blog 폴더 내의 hugo.yaml 파일을 열고, 사용할 테마를 작성하세요.\n1 2 3 4 5 baseURL: https://example.org/ languageCode: en-us title: My New Hugo Site theme: hugo-PaperMod # theme: \u003c테마 이름\u003e 서버 실행 및 미리보기: 다음 명령어로 로컬 서버를 실행하고 웹 브라우저에서 http://localhost:1313 주소로 이동하여 사이트를 확인하세요.\n1 hugo server 마무리 이번 튜토리얼에서는 Windows 환경에서 Hugo를 설치하고, 첫 웹사이트를 생성하는 방법을 배웠습니다. Chocolatey를 이용해 Hugo를 쉽게 설치하고, Hugo의 강력한 기능과 빠른 성능을 활용하여 기본적인 웹사이트를 구축하는 과정을 거쳤습니다.\n이제 여러분은 Hugo의 기본적인 설치 및 사이트 생성 과정에 익숙해졌을 것입니다. 다음으로, 이렇게 생성한 사이트를 실제로 웹상에 배포하는 방법을 배울 것입니다.\n다음 튜토리얼에서는 GitHub Pages를 사용하여 Hugo 사이트를 호스팅하는 방법을 다룰 예정입니다. GitHub Pages를 통해 여러분의 Hugo 사이트를 인터넷에 무료로 공개하고, 전 세계 사람들과 공유할 수 있게 됩니다.\nGitHub Pages는 사용이 간편하고, GitHub 저장소와 직접 연동되어 효율적인 웹사이트 관리 및 배포가 가능합니다. 다음 튜토리얼에서는 이러한 과정을 자세히 설명하고, 여러분이 쉽게 따라할 수 있도록 안내할 것입니다.\n그러니 기대하시고, 다음 튜토리얼에서 만나요!\n",
+  "wordCount" : "443",
   "inLanguage": "en",
   "image":"https://donglehae.github.io/assets/hugo-cover.png","datePublished": "2024-01-23T22:37:09+09:00",
   "dateModified": "2024-01-23T22:37:09+09:00",
@@ -138,7 +138,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://donglehae.github.io/" accesskey="h" title="CodeClimber (Alt + H)">CodeClimber</a>
+            <a href="https://donglehae.github.io" accesskey="h" title="CodeClimber (Alt + H)">CodeClimber</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,14 +185,14 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://donglehae.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://donglehae.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://donglehae.github.io">Home</a>&nbsp;»&nbsp;<a href="https://donglehae.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       GitHub Pages &#43; Hugo Tutorial (1)
     </h1>
     <div class="post-description">
       Windows 환경에서 Hugo를 설치하고 웹사이트를 생성하는 방법
     </div>
-    <div class="post-meta"><span title='2024-01-23 22:37:09 +0900 KST'>January 23, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;동그리동해
+    <div class="post-meta"><span title='2024-01-23 22:37:09 +0900 KST'>January 23, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;동그리동해
 
 </div>
   </header> 
@@ -222,15 +222,16 @@
 </div>
 
   <div class="post-content"><h2 id="hugo-소개">Hugo 소개<a hidden class="anchor" aria-hidden="true" href="#hugo-소개">#</a></h2>
-<p><a href="https://gohugo.io/about/what-is-hugo"><strong>Hugo</strong></a>는 Go로 작성된 <a href="https://gohugo.io/about/benefits"><strong>정적 사이트 생성기(Static Site Generator)</strong></a>로 웹사이트를 빠르고 효율적으로 구축할 수 있게 해주는 도구입니다.</p>
+<p><a href="https://gohugo.io/about/what-is-hugo"><strong>Hugo</strong></a>는 강력하고 빠른 정적 사이트 생성기로, 간단한 블로그에서부터 복잡한 웹사이트까지 다양한 용도로 사용될 수 있는 오픈 소스 소프트웨어입니다.</p>
 <h2 id="hugo-특징">Hugo 특징<a hidden class="anchor" aria-hidden="true" href="#hugo-특징">#</a></h2>
 <ul>
-<li><strong>고성능</strong>: Hugo는 Go 언어로 작성되어 있어 매우 빠른 성능을 자랑합니다. 큰 사이트도 몇 초 내에 생성할 수 있습니다.</li>
-<li><strong>간편한 설치</strong>: 별도의 의존성이나 데이터베이스 없이 단일 실행 파일로 설치되며, 이는 사용과 배포를 매우 간단하게 만듭니다.</li>
-<li><strong>유연성과 확장성</strong>: Hugo는 다양한 테마와 템플릿을 지원하며, 마크다운(Markdown)을 사용하여 콘텐츠를 작성할 수 있습니다.</li>
-<li><strong>실시간 리로딩</strong>: 로컬 개발 서버에서 작업 시, 파일 변경을 자동으로 감지하여 실시간으로 웹사이트를 업데이트합니다.</li>
-<li><strong>정적 사이트의 장점</strong>: 보안, 속도, 이동성, 버전 관리의 이점을 제공합니다.</li>
-<li><strong>Git 통합</strong>: Hugo는 Git과 잘 통합되어 컨텐츠 관리 및 배포가 용이합니다. 많은 사용자들이 <em>GitHub Pages</em>와 같은 서비스와 함께 Hugo를 사용하여 무료로 웹사이트를 호스팅합니다.</li>
+<li><strong>빠른 빌드 속도</strong>: Hugo는 정적 사이트를 생성하는 데 몇 초 밖에 걸리지 않습니다. 이는 대규모 사이트에서도 뛰어난 성능을 발휘합니다.</li>
+<li><strong>간편한 설치 및 사용</strong>: 별도의 의존성 없이 단일 실행 파일로 제공되므로 설치가 매우 간단합니다. 또한, 사용법이 직관적이어서 학습 곡선이 낮습니다.</li>
+<li><strong>유연한 콘텐츠 관리</strong>: 마크다운(Markdown)을 사용하여 콘텐츠를 작성하고, 다양한 메타데이터 포맷을 지원하여 콘텐츠를 효율적으로 관리할 수 있습니다.</li>
+<li><strong>테마 시스템</strong>: 다양한 테마를 지원하여 사이트의 디자인과 레이아웃을 쉽게 변경할 수 있으며, 커스터마이징도 용이합니다.</li>
+<li><strong>강력한 확장성</strong>: 사용자 정의 템플릿, 단축코드, 플러그인 등을 통해 사이트의 기능을 확장할 수 있습니다.</li>
+<li><strong>SEO 최적화</strong>: 정적 파일 생성으로 빠른 로딩 속도와 함께, SEO(검색 엔진 최적화)에 유리한 구조를 가지고 있습니다.</li>
+<li><strong>Git 통합</strong>: 소스 코드 관리 시스템과의 통합을 통해, 콘텐츠 변경 사항을 쉽게 추적하고 관리할 수 있습니다.</li>
 </ul>
 <h2 id="hugo-설치">Hugo 설치<a hidden class="anchor" aria-hidden="true" href="#hugo-설치">#</a></h2>
 <ol>
@@ -269,15 +270,18 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site blog -f <span style="color:#e6db74">&#34;yaml&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># hugo new site [사이트 이름] [옵션]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hugo new site &lt;사이트 이름&gt; &lt;옵션&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p><a href="https://themes.gohugo.io"><strong>Hugo 테마 선택</strong></a>: 마음에 드는 테마를 선택하세요. <em>GitHub Pages + Hugo Tutorial</em>에서는 <em>PaperMod</em> 테마를 기준으로 작성하겠습니다.</p>
+<p><a href="https://themes.gohugo.io"><strong>Hugo 테마 선택</strong></a>: 마음에 드는 테마를 선택하세요.</p>
+<blockquote>
+<p><strong>GitHub Pages + Hugo Tutorial</strong>에서는 <code>PaperMod</code> 테마를 기준으로 설명하겠습니다.</p>
+</blockquote>
 </li>
 <li>
-<p><a href="https://github.com/adityatelange/hugo-PaperMod"><strong>PaperMod 테마 적용</strong></a>: 선택한 테마의 GitHub 레포지토리 링크를 복사한 후, 다음 명령어로 테마를 사이트에 추가하세요.</p>
+<p><a href="https://github.com/adityatelange/hugo-PaperMod"><strong>PaperMod 테마 등록</strong></a>: 선택한 테마의 GitHub 레포지토리 링크를 복사한 후, 다음 명령어로 테마를 사이트에 추가하세요.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -285,20 +289,18 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd blog
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># cd [사이트 이름]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cd &lt;사이트 이름&gt;</span>
 </span></span><span style="display:flex;"><span>git init
 </span></span><span style="display:flex;"><span>git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># git submodule add [테마의 GitHub URL] themes/[테마 이름]</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>  <span style="color:#f92672">{</span>linenos<span style="color:#f92672">=</span>true<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># git submodule add &lt;테마의 GitHub URL&gt; themes/&lt;테마 이름&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p><strong>설정 파일 수정</strong>: blog 폴더 내의 <code>hugo.yaml</code> 파일을 열고, 사용할 테마를 작성하세요.</p>
+<p><strong>PaperMod 테마 적용</strong>: <code>blog</code> 폴더 내의 <code>hugo.yaml</code> 파일을 열고, 사용할 테마를 작성하세요.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -312,7 +314,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">languageCode</span>: <span style="color:#ae81ff">en-us</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">My New Hugo Site</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">theme</span>: <span style="color:#ae81ff">hugo-PaperMod</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># theme: [테마 이름]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># theme: &lt;테마 이름&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -345,13 +347,20 @@
       <li><a href="https://donglehae.github.io/tags/chocolatey/">Chocolatey</a></li>
       <li><a href="https://donglehae.github.io/tags/papermod/">PaperMod</a></li>
     </ul>
+<nav class="paginav">
+  <a class="next" href="https://donglehae.github.io/posts/2024-01-31-0002/">
+    <span class="title">Next »</span>
+    <br>
+    <span>GitHub Pages &#43; Hugo Tutorial (2)</span>
+  </a>
+</nav>
 
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://donglehae.github.io/">CodeClimber</a></span>
+    <span>&copy; 2024 <a href="https://donglehae.github.io">CodeClimber</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

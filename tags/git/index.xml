@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CodeClimber</title>
-    <link>https://donglehae.github.io/</link>
-    <description>Recent content on CodeClimber</description>
+    <title>Git on CodeClimber</title>
+    <link>https://donglehae.github.io/tags/git/</link>
+    <description>Recent content in Git on CodeClimber</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jan 2024 22:25:30 +0900</lastBuildDate>
-    <atom:link href="https://donglehae.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://donglehae.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Pages &#43; Hugo Tutorial (2)</title>
       <link>https://donglehae.github.io/posts/2024-01-31-0002/</link>
       <pubDate>Wed, 31 Jan 2024 22:25:30 +0900</pubDate>
       <guid>https://donglehae.github.io/posts/2024-01-31-0002/</guid>
       <description>Hugo로 생성한 웹사이트를 GitHub Pages로 배포하는 방법</description>
-    </item>
-    <item>
-      <title>GitHub Pages &#43; Hugo Tutorial (1)</title>
-      <link>https://donglehae.github.io/posts/2024-01-23-0001/</link>
-      <pubDate>Tue, 23 Jan 2024 22:37:09 +0900</pubDate>
-      <guid>https://donglehae.github.io/posts/2024-01-23-0001/</guid>
-      <description>Windows 환경에서 Hugo를 설치하고 웹사이트를 생성하는 방법</description>
     </item>
   </channel>
 </rss>
